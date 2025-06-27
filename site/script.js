@@ -7,6 +7,10 @@
  */
 
 let mobileMenu = null;
+let modalDialog = null;
+let modalDialogClasses = null;
+let modalDialogInner = null;
+let modalDialogInnerClasses = null;
 let progressBar = null;
 let sections = null;
 let navLinks = null;
@@ -41,10 +45,18 @@ document.addEventListener('DOMContentLoaded', function() {
         closeMobileMenu();
     });
 
-    // close menus on ESC key press
+    // global dialog
+    modalDialog.addEventListener('click', (event) => {
+        if (event.target === modalDialog) {
+            closeDialog();
+        }
+    });
+
+    // close menus / dialogs on ESC key press
     document.addEventListener('keydown', function(evt) {
         if (evt.key === 'Escape') {
             closeMobileMenu();
+            closeDialog();
         }
     });
 
@@ -64,14 +76,45 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function initGlobalVars() {
     mobileMenu = document.getElementById('mobile-menu');
+    modalDialog = document.getElementById('modalDialog');
+    modalDialogClasses = modalDialog.classList;
+    modalDialogInner = document.getElementById('modalDialogInner');
+    modalDialogInnerClasses = modalDialogInner.classList;
     progressBar = document.getElementById('progressBar');
     sections = document.querySelectorAll('section');
     navLinks = document.querySelectorAll('.my-navlink');
     currentSection = document.getElementById('currentSection');
 }
 
+function showDialog(title, subtitle, textTemplateEl) {
+    document.getElementById('modalDialogTitle').innerHTML = title;
+
+    const subtitleEl = document.getElementById('modalDialogSubtitle');
+    subtitleEl.innerHTML = subtitle;
+    if (subtitle === '')
+        subtitleEl.classList.add('none');
+    else
+        subtitleEl.classList.remove('none');
+
+    document.getElementById('modalDialogText').innerHTML = textTemplateEl.innerHTML;
+    modalDialogInner.scrollTo(0, 0);
+
+    modalDialogClasses.remove('pointer-events-none');
+    modalDialogClasses.remove('opacity-0');
+    modalDialogInnerClasses.remove('scale-0');
+    document.body.style.overflow = 'hidden';
+}
+
 function closeMobileMenu() {
     mobileMenu.classList.remove('expanded');
+}
+
+function closeDialog() {
+    modalDialogClasses.remove('pointer-events-none');
+    modalDialogClasses.add('pointer-events-none');
+    modalDialogClasses.add('opacity-0');
+    modalDialogInnerClasses.add('scale-0');
+    document.body.style.overflow = '';
 }
 
 function updateProgressBar() {

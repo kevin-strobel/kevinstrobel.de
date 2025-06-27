@@ -40,6 +40,16 @@
     mobile view while the user scrolls the page and the canvas is not yet updated.
 -->
 <body class="bg-blue-950">
+    <canvas id="sky" class="fixed -z-9999"></canvas>
+    <!-- Dialog -->
+    <div id="modalDialog" class="fixed none inset-0 z-9999 bg-blue-950/50 items-center pointer-events-none opacity-0 transform transition-opacity duration-300">
+        <div id="modalDialogInner" class="fixed top-1/2 left-1/2 max-w-[80vw] max-h-[80vh] overflow-auto -translate-1/2 rounded-lg shadow-lg shadow-blue-500/50 bg-gradient-to-r text-white from-blue-800/90 from-10% to-blue-900/90 to-90% p-6 scale-0 transform transition-transform duration-300">
+            <h2 id="modalDialogTitle" class="text-3xl font-bold text-center"><!-- filled via JS --></h2>
+            <h3 id="modalDialogSubtitle" class="text-2xl text-center mt-4"><!-- filled via JS --></h3>
+            <div id="modalDialogText" class="flex flex-col gap-4 mt-10 text-xl"><!-- filled via JS --></div>
+        </div>
+    </div>
+
     <header class="fixed w-screen top-0 z-9998">
         <noscript>
             <div class="bg-gradient-to-r from-red-400 from-10% via-red-500 via-50% to-red-400 to-90% text-white text-lg sm:text-2xl text-center">
