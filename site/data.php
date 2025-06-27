@@ -117,4 +117,103 @@
         skillAdd("Windows", "devicon/windows11.svg", "My main operating system in former days and currently at work, typically in combination with the WSL (Windows Subsystem for Linux).") .
         skillAdd("Windows Embedded Compact 2013", "", "For a client project with real-time requirements, I’ve been optimizing applications for Windows Embedded Compact 2013, including rewriting kernel drivers and debugging kernel events.") .
         skillEnd();
+
+    /*
+     ------------------
+     - Section Career -
+     ------------------
+     */
+    $data->secCareer =
+        careerBegin() .
+        careerContent(
+        'l',
+        'MATHEMA GmbH',
+        '07/2021 - now',
+        'Embedded Software / Firmware Developer',
+        <<<EOL
+        <li>Provide development support for various clients and applications (C / C&NoBreak;+&NoBreak;+, real-time systems, QtQuick)</li>
+        <li>Optimize real-time applications</li>
+        <li>Create, design, and model software architectures</li>
+        <br/>
+        <li>Handle communication with the clients</li>
+        <li>Perform project management</li>
+        <li>Create proposals</li>
+        <br/>
+        <li>Perform requirements analysis</li>
+        <li>Perform effort estimations</li>
+        <br/>
+        <li>Give technical conference talks</li>
+        EOL
+        ) .
+        careerTimeline(1) .
+        careerEmpty() .
+        careerEnd() .
+
+        careerBegin() .
+        careerContent(
+        'l',
+        'Friedrich-Alexander-Universität Erlangen-Nürnberg',
+        '04/2018 - 03/2021',
+        'Computer science studies (Master of Science)',
+        <<<EOL
+        <li>Thesis about developing and benchmarking an Out-of-Order RISC&NoBreak;-&NoBreak;V CPU on an FPGA</li>
+        <li>Original thesis title: "Evaluating a Custom-Made Out-of-Order RISC&NoBreak;-&NoBreak;V CPU In Regard to Application Specific Instruction Set Extensions"</li>
+        <li>Final grade: 1.0 (German grading system)</li>
+        EOL
+        ) .
+        careerTimeline(0) .
+        careerContent(
+        'r',
+        'Friedrich-Alexander-Universität Erlangen-Nürnberg',
+        '03/2019 - 09/2019',
+        'Research assistant at the chair of Computer Architecture',
+        <<<EOL
+        <li>Simulate C programs on Verilog-based RISC&NoBreak;-&NoBreak;V processor models using Verilator and VCS</li>
+        <li>Create a script environment to automate extensive tests</li>
+        <li>Determine the run time (number of processor clock cycles) and power consumption for each program under test</li>
+        EOL
+        ) .
+        careerEnd() .
+
+        careerBegin() .
+        careerContent(
+        'l',
+        'Accenture Technology Solutions GmbH',
+        '10/2014 - 03/2018',
+        'Software Engineer',
+        <<<EOL
+        <li>Provide backend development support for a large JavaEE-based, model-driven web application</li>
+        <li>Perform bugfixing</li>
+        <li>Train new employees in several domains (Spring batch jobs, Unit testing, SOAP web services)</li>
+        EOL
+        ) .
+        careerTimeline(1) .
+        careerEmpty() .
+        careerEnd() .
+
+        careerBegin() .
+        careerContent(
+        'l',
+        'Duale Hochschule Baden-Württemberg Ravensburg',
+        '10/2011 - 09/2014',
+        'Business informatics studies (Bachelor of Science, "Duales Studium")',
+        <<<EOL
+        <li>Thesis about managing mutual dependencies between departments in a Scrum-driven project; to visualize those dependencies, I created a web-based tool</li>
+        <li>Original thesis title: "Management von wechselseitigen Abhängigkeiten zwischen Scrum-getriebenen Abteilungen in der Bundesagentur für Arbeit und Entwicklung eines Tools zur Visualisierung dieser Interdependenzen"</li>
+        <li>Final grade: 1.9 (German grading system)</li>
+        EOL
+        ) .
+        careerTimeline(0) .
+        careerContent(
+        'r',
+        'Accenture Technology Solutions GmbH',
+        '10/2011 - 09/2014',
+        'Practical part of the studies ("Duales Studium")',
+        <<<EOL
+        <li>Test a large JavaEE-based web application</li>
+        <li>Write unit-tests</li>
+        <li>Support the project management office</li>
+        EOL
+        ) .
+        careerEnd();
 ?>

@@ -116,5 +116,22 @@
             ?>
         </div>
     </section>
+
+    <section id="career" class="flex justify-center items-center flex-col text-white">
+        <h1 class="hidden">Career</h1>
+
+        <div class="relative w-3/4">
+            <!-- Timeline line -->
+            <!-- Opacity: 10% for small displays (one column mode) -->
+            <div class="absolute inset-0 left-1/2 w-1 bg-white rounded -translate-x-1/2 opacity-10 md:opacity-100"></div>
+
+            <!-- continued timeline line -->
+            <div class="mb-20"></div>
+
+            <?php
+                echo $data->secCareer;
+            ?>
+        </div>
+    </section>
 </body>
 </html>
