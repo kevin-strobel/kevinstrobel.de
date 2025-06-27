@@ -87,5 +87,16 @@
             </div>
         </nav>
     </header>
+
+    <section id="home" class="flex flex-col sm:flex-row justify-center items-center sm:space-x-12 space-y-12 sm:space-y-0 text-white">
+        <img class="w-1/3 min-w-3xs max-w-sm enterAnimation fade-in" src="assets/me.png" alt="me" />
+        <div class="flex flex-col gap-y-8 text-center sm:text-start sm:gap-y-12 enterAnimation fade-in animDelayLong">
+            <div class="text-xl xl:text-4xl">Hey! I’m</div>
+            <h1 class="text-4xl xl:text-8xl font-bold"><?php echo $data->name; ?></h1>
+            <div class="text-xl xl:text-4xl"><?php echo $data->jobTitle; ?></div>
+            <div class="text-xl xl:text-4xl"><?php echo $data->degree; ?></div>
+            <div class="text-lg xl:text-3xl">&#x1F4CD; <?php echo $data->location; ?></div>
+        </div>
+    </section>
 </body>
 </html>

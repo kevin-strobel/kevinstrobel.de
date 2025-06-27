@@ -32,6 +32,8 @@
     $data->name = $data->metaAuthor;
     $data->jobTitle = "Embedded Software / Firmware Developer";
     $data->websiteTitle = "$data->name | $data->jobTitle";
+    $data->degree = "MS Computer Science";
+    $data->location = "Nuremberg, BY, Germany";
 
     /*
      ********
