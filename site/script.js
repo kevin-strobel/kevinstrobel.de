@@ -69,6 +69,9 @@ document.addEventListener('DOMContentLoaded', function() {
         updateProgressBar();
     });
 
+    // element fade-in
+    initAnimations();
+
     // initial update
     updateProgressBar();
     updateNavbar();
@@ -156,5 +159,60 @@ function updateNavbar() {
             if(activeNavLinks.length > 0)
                 currentSection.textContent = activeNavLinks[0].textContent;
         }
+    });
+}
+
+/**
+  * Initialize "element appears" animations.
+  * Elements must be animated again if these are only scrolled over very quickly,
+  * so that the user has the chance to observe the animations.
+  */
+function initAnimations() {
+    const faders = document.querySelectorAll(ANIMATION_SELECTOR);
+
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            const now = Date.now();
+            const el = entry.target;
+            const enterDate = observedElements.get(el);
+
+            if (entry.isIntersecting) {
+                // element enters the viewport
+
+                if (enterDate === undefined) {
+                    observedElements.set(el, now);
+
+                    // play animation
+                    el.classList.add(PLAY_ANIMATION_CLASS);
+                }
+            } else {
+                // elements exits the viewport
+
+                if (enterDate !== undefined) {
+                    const visibleDuration = now - enterDate;
+                    if (visibleDuration < EL_MIN_VISIBLE_DURATION_MS) {
+                        /*
+                         * Element was visible for a short period of time only.
+                         * Replay animation next time.
+                         */
+                        el.classList.remove(PLAY_ANIMATION_CLASS);
+                    } else {
+                        // User has observed the animation; stop further processing
+                        observer.unobserve(el);
+                    }
+
+                    observedElements.delete(el);
+                }
+                else {
+                    // do nothing - should never occur
+                }
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader);
     });
 }
