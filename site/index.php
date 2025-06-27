@@ -7,6 +7,9 @@
      * See the LICENSE.txt file in the project root for full license text.
      */
 
+    require('minify.php');
+    minifyStart();
+
     require('data.php');
 ?>
 <!DOCTYPE html>
@@ -167,3 +170,6 @@
     </footer>
 </body>
 </html>
+<?php
+    minifyEnd();
+?>
