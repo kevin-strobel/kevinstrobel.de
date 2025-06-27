@@ -216,4 +216,74 @@
         EOL
         ) .
         careerEnd();
+
+    /*
+     -----------------
+     - Section Talks -
+     -----------------
+     */
+    $singleCycleCpuLink = externalLink("GitHub", "https://github.com/kevin-strobel/single-cycle-cpu");
+    $data->secTalks =
+        talkAdd(
+                'No RISC, no fun',
+                'Let’s design our own CPU!',
+                '75min',
+                'MATHEMA Campus',
+                '2024',
+                <<<EOL
+                <div>
+                    As software developers, we are familiar with writing, maintaining, and debugging programs. But have we ever thought about how the computer’s brain - the CPU - executes the code? Let’s dive into the world of processor architectures!
+                </div>
+                <div>
+                    To better understand this theoretical subject, we will have a look at a simplified &quot;softcore&quot;. This is a processor whose circuitry is not &quot;cast in silicon&quot; but modeled using a hardware description language such as VHDL. That allows us to implement the CPU on an FPGA, a chip in which logic circuits can be programmed. Gradually, we will discuss the individual components of the core and extend it with smaller features. On the FPGA, we will then use small C++ programs to test our processor.
+                </div>
+                <div>
+                    Finally, the presentation covers methods for performance optimization, which are also used in modern CPUs.
+                </div>
+                <div>
+                    Not mandatory, but certainly helpful, is basic prior knowledge of digital circuits, VHDL, assembly language (RISC-V), and C++.
+                </div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="italic">
+                    <span>The softcore can be found at </span>
+                    $singleCycleCpuLink
+                    <span>.</span>
+                </div>
+                <div></div>
+                <div class="italic">
+                    The original title of this German talk is: No RISC, no fun - Entwerfen wir unsere eigene CPU!
+                </div>
+                EOL
+        ) .
+
+        talkAdd(
+                'Introduction to FPGA development',
+                '',
+                '75min',
+                'MATHEMA Campus',
+                '2023',
+                <<<EOL
+                <div>
+                    As software developers in the world of hardware-oriented programming, we occasionally stumble over FPGAs - programmable logic circuits. Usually, they are classified as hardware and not paid any more attention.
+                </div>
+                <div>
+                    In this presentation, we will blur the boundaries between software and hardware development. To do so, we will learn what an FPGA is, how to implement digital circuits on it, and in which problem scenarios an FPGA might be the preferred solution. However, we have to adjust our software-oriented mindset of how to solve problems and learn to think more closely in terms of hardware.
+                </div>
+                <div>
+                    To create FPGA designs, we will get to know the basics of the language VHDL and - building upon that - demonstrate a circuit design we have created using a Xilinx FPGA.
+                </div>
+                <div>
+                    This presentation is aimed at software developers with little to no experience with FPGAs, but it is also suitable for anyone interested in FPGAs.
+                </div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div>
+                <div class="italic">
+                    The original title of this German talk is: Einführung in die FPGA-Entwicklung
+                </div>
+                EOL
+        );
 ?>

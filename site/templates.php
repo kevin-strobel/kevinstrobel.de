@@ -7,6 +7,16 @@
      * See the LICENSE.txt file in the project root for full license text.
      */
 
+    // Create an external link that can be placed into running text
+    function externalLink($text, $link) {
+        return <<<EOL
+        <a class="inline-flex gap-1" href="$link" target="_blank">
+            <span>$text</span>
+            <img src="assets/tabler-icons/external-link.svg" />
+        </a>
+        EOL;
+    }
+
     function menuEntryAdd($name, $anchor) {
         return <<<EOL
         <a class="my-navlink" href="#$anchor">$name</a>
@@ -127,6 +137,34 @@
     
     function careerEnd() {
         return <<<EOL
+        </div>
+        EOL;
+    }
+
+    function talkAdd($title, $subtitle, $duration, $location, $date, $details) {
+        // HTMl -> plain text
+        $previewDetails = preg_replace('/<[^>]*>/', ' ', $details);
+        // return at most x chars and add an ellipsis
+        $previewDetails = substr($previewDetails, 0, 248) . " &#8230;";
+
+        return <<<EOL
+        <div class="enterAnimation fade-in">
+            <template class="my-template">
+                $details
+            </template>
+
+            <!-- button instead of a to make it focusable via TAB key -->
+            <button class="flex flex-col justify-between bg-blue-900/90 h-full p-8 rounded-3xl shadow-lg text-base sm:text-lg my-touch-full-opacity opacity-90 cursor-pointer transition delay-50 duration-300 ease-in-out hover:opacity-100 hover:scale-105" onclick="showDialog('$title', '$subtitle', this.parentElement.querySelector('.my-template'))">
+                <!-- Safari: w-full to have content centered (was left-aligned because it is a button instead of a link) -->
+                <div class="w-full mb-8">
+                    <h2 class="font-bold text-xl sm:text-3xl mb-4">$title</h2>
+                    <div class="text-lg sm:text-2xl mb-6">$subtitle</div>
+                    <div>$duration @ $location, $date</div>
+                </div>
+                <div>
+                    $previewDetails
+                </div>
+            </button>
         </div>
         EOL;
     }
