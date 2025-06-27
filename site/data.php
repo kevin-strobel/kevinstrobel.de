@@ -32,4 +32,18 @@
     $data->name = $data->metaAuthor;
     $data->jobTitle = "Embedded Software / Firmware Developer";
     $data->websiteTitle = "$data->name | $data->jobTitle";
+
+    /*
+     ********
+     * MENU *
+     ********
+     */
+
+    $data->menu =
+        menuEntryAdd("About Me", "aboutMe") .
+        menuEntryAdd("Skills", "skills") .
+        menuEntryAdd("Career", "career") .
+        menuEntryAdd("Talks", "talks") .
+        menuEntryAdd("Certificates", "certs") .
+        menuEntryAdd("Links", "links");
 ?>

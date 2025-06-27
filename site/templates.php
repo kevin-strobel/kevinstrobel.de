@@ -7,4 +7,9 @@
      * See the LICENSE.txt file in the project root for full license text.
      */
 
+    function menuEntryAdd($name, $anchor) {
+        return <<<EOL
+        <a class="my-navlink" href="#$anchor">$name</a>
+        EOL;
+    }
 ?>
