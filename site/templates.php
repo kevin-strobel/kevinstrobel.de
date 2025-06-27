@@ -220,4 +220,15 @@
         </div>
         EOL;
     }
+
+    function copyright($inceptionYear, $copyrightName) {
+        $currYear = date("Y");
+
+        if(intval($inceptionYear) < $currYear)
+            $copyrightYears = "$inceptionYear - $currYear";
+        else
+            $copyrightYears = $currYear;
+
+        return "&copy; $copyrightYears $copyrightName";
+    }
 ?>

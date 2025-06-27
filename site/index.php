@@ -161,5 +161,9 @@
             echo $data->secLinks;
         ?>
     </section>
+
+    <footer class="bg-blue-950 -mt-[3rem] font-bold sm:text-lg text-center text-white z-9998">
+        <?php echo copyright($data->websiteInceptionYear, $data->name); ?>
+    </footer>
 </body>
 </html>

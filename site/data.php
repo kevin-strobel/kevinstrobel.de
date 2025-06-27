@@ -32,6 +32,7 @@
     $data->name = $data->metaAuthor;
     $data->jobTitle = "Embedded Software / Firmware Developer";
     $data->websiteTitle = "$data->name | $data->jobTitle";
+    $data->websiteInceptionYear = 2025;
     $data->degree = "MS Computer Science";
     $data->location = "Nuremberg, BY, Germany";
     // This is not the real address, see script.js:msg for more details
