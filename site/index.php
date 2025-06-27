@@ -98,5 +98,13 @@
             <div class="text-lg xl:text-3xl">&#x1F4CD; <?php echo $data->location; ?></div>
         </div>
     </section>
+
+    <section id="aboutMe" class="flex justify-center flex-col space-y-6 w-5/6 xl:w-1/3 m-auto text-white text-2xl enterAnimation fade-in">
+        <h1 class="hidden">About me</h1>
+
+        <?php
+            echo $data->secAboutMe;
+        ?>
+    </section>
 </body>
 </html>

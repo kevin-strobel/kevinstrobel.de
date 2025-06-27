@@ -48,4 +48,22 @@
         menuEntryAdd("Talks", "talks") .
         menuEntryAdd("Certificates", "certs") .
         menuEntryAdd("Links", "links");
+
+    /*
+     *******************
+     * SECTION CONTENT *
+     *******************
+     */
+
+    /*
+     --------------------
+     - Section About me -
+     --------------------
+     */
+    $data->secAboutMe =
+        aboutMeParagraphAdd("During my time as a backend web developer, I was always curious about how hardware and software interact in detail.") .
+        aboutMeParagraphAdd("Therefore, I delved into microprocessor architecture and design and implemented an Out-of-Order, superscalar RISC-V CPU on an FPGA for my Master’s thesis.") .
+        aboutMeParagraphAdd("With a precise understanding of how systems execute code, I now really enjoy designing and writing embedded firmware and software and grasping the complexity of C++.") .
+        aboutMeParagraphAdd("As a developer, my passion is to work accurately and solve everyday problems by designing software architectures and writing clean, efficient as well as maintainable code while doing some project management.") .
+        aboutMeParagraphAdd("When I’m not coding, you’ll probably find me playing the organ, the piano or visiting some city on a sunny afternoon.");
 ?>

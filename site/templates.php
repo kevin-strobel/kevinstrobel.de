@@ -12,4 +12,12 @@
         <a class="my-navlink" href="#$anchor">$name</a>
         EOL;
     }
+
+    function aboutMeParagraphAdd($content) {
+        return <<<EOL
+        <div>
+            $content
+        </div>
+        EOL;
+    }
 ?>
