@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="styles.css">
 
     <script src="script.js"></script>
+    <script src="sky.js"></script>
 </head>
 
 <!--
