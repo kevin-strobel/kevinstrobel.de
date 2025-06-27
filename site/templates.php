@@ -189,4 +189,35 @@
         </div>
         EOL;
     }
+
+    function linkAdd($url, $img, $altText, $isExternal) {
+        $externalIcon = !$isExternal ? "" : <<<EOF
+        <img class="absolute w-1/5 top-1 right-1" src="assets/tabler-icons/external-link.svg" />
+        EOF;
+
+        return <<<EOL
+        <div class="enterAnimation fade-in">
+            <div class="relative bg-blue-900/90 p-4 rounded-3xl shadow-lg my-touch-full-opacity opacity-90 transition delay-50 duration-300 ease-in-out hover:opacity-100 hover:scale-120">
+                <a href="$url" target="_blank">
+                    $externalIcon
+                    <img class="w-[3rem] sm:w-[4rem] md:w-[6rem]" src="$img" alt="$altText" />
+                </a>
+            </div>
+        </div>
+        EOL;
+    }
+
+    function linkEncryptedMailAdd($mailAddress, $img, $altText) {
+        $mailAddress = "msg('$mailAddress')";
+        return <<<EOL
+        <div class="enterAnimation fade-in">
+            <div class="relative bg-blue-900/90 p-4 rounded-3xl shadow-lg my-touch-full-opacity opacity-90 transition delay-50 duration-300 ease-in-out hover:opacity-100 hover:scale-120">
+                <button onclick="window.open($mailAddress)">
+                    <img class="absolute w-1/5 top-1 right-1" src="assets/tabler-icons/external-link.svg" />
+                    <img class="w-[3rem] sm:w-[4rem] md:w-[6rem]" src="$img" alt="$altText" />
+                </button>
+            </div>
+        </div>
+        EOL;
+    }
 ?>

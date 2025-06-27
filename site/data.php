@@ -34,6 +34,8 @@
     $data->websiteTitle = "$data->name | $data->jobTitle";
     $data->degree = "MS Computer Science";
     $data->location = "Nuremberg, BY, Germany";
+    // This is not the real address, see script.js:msg for more details
+    $data->mail = "kevi0@kevinstrobel.me";
 
     /*
      ********
@@ -307,4 +309,15 @@
                 "assets/cert_spring_eis.pdf",
                 false
         );
+
+    /*
+     -----------------
+     - Section Links -
+     -----------------
+     */
+    $data->secLinks =
+        linkAdd("https://www.xing.com/profile/Kevin_Strobel", "assets/tabler-icons/xing.svg", "XING", true) .
+        linkAdd("https://www.linkedin.com/in/kevin-strobel-122b9a370", "assets/tabler-icons/linkedin.svg", "LinkedIn", true) .
+        linkAdd("https://github.com/kevin-strobel", "assets/tabler-icons/github.svg", "GitHub", true) .
+        linkEncryptedMailAdd($data->mail, "assets/tabler-icons/mail.svg", "Mail");
 ?>

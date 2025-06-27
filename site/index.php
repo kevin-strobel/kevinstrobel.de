@@ -153,5 +153,13 @@
             ?>
         </div>
     </section>
+
+    <section id="links" class="flex flex-col md:flex-row justify-around items-center pb-[3rem]">
+        <h1 class="hidden">Links</h1>
+
+        <?php
+            echo $data->secLinks;
+        ?>
+    </section>
 </body>
 </html>

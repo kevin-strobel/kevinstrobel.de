@@ -216,3 +216,20 @@ function initAnimations() {
         appearOnScroll.observe(fader);
     });
 }
+
+function msg(txt) {
+    var rp = {
+        i: 'o',
+        k: 'i',
+        v: 'f',
+        e: 'n'
+    };
+    let a = txt.substr(0, txt.indexOf('0'));
+    a = a.replace(/./g, function(c) { return rp[c]; });
+    let b = txt.substr(txt.indexOf('0')).substr(1);
+    b = b.replace('.m', '.d');
+    const c = 'otliam'.split('').reverse().join('');
+    const d = ':';
+
+    return c + d + a + b;
+}
