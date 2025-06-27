@@ -168,4 +168,25 @@
         </div>
         EOL;
     }
+
+    function certAdd($title, $year, $img, $url, $isExternal) {
+        $externalIcon = !$isExternal ? "" : <<<EOF
+        <img class="absolute w-1/16 top-0 right-0" src="assets/tabler-icons/external-link.svg" />
+        EOF;
+
+        return <<<EOL
+        <div class="relative group enterAnimation fade-in">
+            <a href="$url" target="_blank">
+                <div class="flex flex-col justify-between bg-blue-900/90 h-full p-8 rounded-3xl shadow-lg my-touch-full-opacity opacity-90 transition delay-50 duration-300 ease-in-out group-hover:opacity-100 group-hover:scale-105">
+                    $externalIcon
+                    <div class="text-center">
+                        <h2 class="font-bold text-xl sm:text-3xl mb-4">$title</h2>
+                        <div class="text-lg sm:text-2xl mb-6">$year</div>
+                    </div>
+                    <img class="h-[10rem] sm:h-[16rem] md:h-[24rem] object-contain" src="$img" alt="$title" />
+                </div>
+            </a>
+        </div>
+        EOL;
+    }
 ?>

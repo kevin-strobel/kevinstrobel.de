@@ -143,5 +143,15 @@
             ?>
         </div>
     </section>
+
+    <section id="certs" class="flex justify-center flex-col items-center">
+        <h1 class="hidden">Certificates</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 w-3/4 gap-8 m-auto text-white">
+            <?php
+                echo $data->secCerts;
+            ?>
+        </div>
+    </section>
 </body>
 </html>

@@ -286,4 +286,25 @@
                 </div>
                 EOL
         );
+
+    /*
+     ------------------------
+     - Section Certificates -
+     ------------------------
+     */
+    $data->secCerts =
+        certAdd(
+                "iSAQB® Certified Professional for Software Architecture - Foundation Level",
+                "2025",
+                "assets/cert_cpsa_f.png",
+                "https://www.certible.com/badge/4b4b4d4b-1896-477b-a9a6-d35812d77f6e/",
+                true
+        ) .
+        certAdd(
+                "Pivotal® Certified Spring Enterprise Integration Specialist",
+                "2016",
+                "assets/cert_spring_eis.png",
+                "assets/cert_spring_eis.pdf",
+                false
+        );
 ?>
