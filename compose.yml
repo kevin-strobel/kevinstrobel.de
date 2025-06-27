@@ -1,0 +1,17 @@
+name: developer-portfolio
+
+services:
+    npm-web:
+        image: npm_web:$CONT_NPM_WEB_VERSION
+        volumes:
+            - $PROJ_DIR:/src
+        # watch=always: Do not stop watching even if stdin gets closed
+        command: /bin/sh -c 'npm install tailwindcss @tailwindcss/cli && npx @tailwindcss/cli -i $CSS_INPUT_FILE -o $CSS_OUTPUT_FILE --watch=always --minify'
+        stop_grace_period: 1s # Reduce stop timeout since tailwindcss-cli does not seem to handle SIGTERM at all
+
+    apache-php:
+        image: php:$CONT_APACHE_PHP_VERSION-apache
+        ports:
+            - 80:80
+        volumes:
+            - $PROJ_DIR/site:/var/www/html
