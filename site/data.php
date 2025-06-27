@@ -11,4 +11,25 @@
     require('templates.php');
 
     $data = new Model();
+
+
+    /*
+     *************
+     * META TAGS *
+     *************
+     */
+
+    $data->metaDesc = "I’m an embedded software / firmware developer based in Nuremberg. My passion is to work accurately and solve everyday problems by designing software architectures and writing clean, efficient as well as maintainable code while doing some project management.";
+    $data->metaKeywords = "Embedded, C, C++, CMake, Compiler, Rust, Microcontroller, FPGA, Docker, Linux, Concurrency, Real-time, Priority inversion";
+    $data->metaAuthor = "Kevin Strobel";
+
+    /*
+     ***********************
+     * GENERAL INFORMATION *
+     ***********************
+     */
+
+    $data->name = $data->metaAuthor;
+    $data->jobTitle = "Embedded Software / Firmware Developer";
+    $data->websiteTitle = "$data->name | $data->jobTitle";
 ?>

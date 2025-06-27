@@ -1,0 +1,216 @@
+/*
+ * Copyright (c) 2025 Kevin Strobel
+ * SPDX-License-Identifier: MIT
+ *
+ * This file is licensed under the MIT License.
+ * See the LICENSE.txt file in the project root for full license text.
+ */
+
+@import "tailwindcss";
+
+html {
+    scroll-behavior: smooth;
+    /* Edge, Chrome hide scrollbar and shift content if body's overflow is hidden. Prevent that. */
+    scrollbar-gutter: stable;
+    /*
+     * 1st color: bg-blue-900/90 (keep in sync with index.php:nav)
+     * 2nd color: bg-blue-300 (keep in sync with several button / link elements)
+     */
+    scrollbar-color: color-mix(in oklab,var(--color-blue-900)90%,transparent) oklch(80.9% 0.105 251.813);
+}
+
+section {
+    @apply min-h-screen;
+    @apply pt-26;
+}
+
+button {
+    @apply cursor-pointer;
+}
+
+.my-list {
+    padding-left: 1rem;
+}
+
+.my-list li::marker {
+    color: oklch(80.9% 0.105 251.813);
+}
+
+.my-navlink {
+    @apply text-base;
+    @apply sm:text-lg;
+
+    @apply px-4;
+    @apply py-2;
+    @apply rounded-md;
+
+    transition: color 1s ease, background-color 1s ease;
+}
+
+.my-navlink-active {
+    @apply text-white;
+    @apply bg-blue-700;
+}
+
+.my-navlink:hover:not(.my-navlink-active) {
+    @apply text-white;
+    @apply bg-blue-400;
+}
+
+.expand-down {
+    max-height: 0vh;
+    overflow: hidden;
+    transition: max-height 500ms ease-in-out;
+}
+
+.expand-down.expanded {
+    max-height: 100vh;
+}
+
+/*
+ * Animations for elements entering the viewport.
+ * (Connected to IntersectionObserver)
+ */
+
+@keyframes fade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(2rem);
+}
+
+.fade-in.playAnim {
+    animation: 750ms ease-in-out 200ms forwards fade;
+}
+
+.fade-in.playAnim.animDelayLong {
+    animation-delay: 1200ms;
+}
+
+@keyframes shakeToRight {
+    to { opacity: 1; }
+
+    0% { transform:   translateX(0rem); }
+    10% { transform:  translateX(-2.5rem); }
+    20% { transform:  translateX(0rem); }
+    30% { transform:  translateX(-2.5rem); }
+    40% { transform:  translateX(0rem); }
+    50% { transform:  translateX(-1rem); }
+    60% { transform:  translateX(0rem); }
+    70% { transform:  translateX(-1rem); }
+    80% { transform:  translateX(0rem); }
+    90% { transform:  translateX(-0.5rem); }
+    100% { transform: translateX(0); }
+}
+
+.shake-to-right {
+    opacity: 0;
+    transform: translateX(-3rem);
+}
+
+.shake-to-right.playAnim {
+    animation: 750ms ease-in-out 200ms forwards shakeToRight;
+}
+
+@keyframes shakeToLeft {
+    to { opacity: 1; }
+
+    0% { transform:   translateX(0rem); }
+    10% { transform:  translateX(2.5rem); }
+    20% { transform:  translateX(0rem); }
+    30% { transform:  translateX(2.5rem); }
+    40% { transform:  translateX(0rem); }
+    50% { transform:  translateX(1rem); }
+    60% { transform:  translateX(0rem); }
+    70% { transform:  translateX(1rem); }
+    80% { transform:  translateX(0rem); }
+    90% { transform:  translateX(0.5rem); }
+    100% { transform: translateX(0); }
+}
+
+.shake-to-left {
+    opacity: 0;
+    transform: translateX(3rem);
+}
+
+.shake-to-left.playAnim {
+    animation: 750ms ease-in-out 200ms forwards shakeToLeft;
+}
+
+
+/*
+ ***************
+ * MEDIA RULES *
+ ***************
+ */
+
+/* Touch devices */
+@media (pointer:coarse) {
+    /* Some effects such as hover effects are not
+     * supported by touch devices, so always
+     * display elements with full opacity.
+     */
+    .my-touch-full-opacity {
+        opacity: 1;
+    }
+}
+
+/* No JS */
+@media (scripting: none) {
+    /* Reveal all content if JS is disabled */
+    .enterAnimation {
+        opacity: 1;
+    }
+}
+
+/* Print */
+@media print {
+    /*
+     * The page is not specifically optimized for printing.
+     * However, some basic styling is applied to make
+     * important content visible and to optimize space.
+     */
+
+    /* Reveal all content for printing */
+    .enterAnimation {
+        opacity: 1;
+    }
+
+    /* Hide menu */
+    header {
+        display: none;
+    }
+
+    /* Show each section's heading for better orientation */
+    h1 {
+        display: initial;
+        @apply text-2xl;
+        padding-bottom: 2rem;
+    }
+
+    /* The icon would disrupt the text flow */
+    .my-timelineIcon {
+        display: none;
+    }
+
+    /* Disable sky background (save ink / toner) */
+    #sky {
+        display: none;
+    }
+
+    * {
+        /* Save ink / toner */
+        color: black;
+        background-color: transparent;
+
+        /* Compress content */
+        font-size: 1rem;
+        padding: 0;
+        margin: 0;
+    }
+}
