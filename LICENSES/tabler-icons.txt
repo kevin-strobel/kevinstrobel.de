@@ -1,10 +1,11 @@
-The software is subject to the MIT license (see below).
-Exceptions apply to parts of the software. These are listed in the LICENSES folder.
+Applying to files under: site/assets/tabler-icons
+Source: https://github.com/tabler/tabler-icons
+Fetch date: 2025/06/20
 
 
 MIT License
 
-Copyright (c) 2025 Kevin Strobel
+Copyright (c) 2020-2024 Paweł Kuna
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -23,4 +24,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-

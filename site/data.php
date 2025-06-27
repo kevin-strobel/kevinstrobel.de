@@ -66,4 +66,55 @@
         aboutMeParagraphAdd("With a precise understanding of how systems execute code, I now really enjoy designing and writing embedded firmware and software and grasping the complexity of C++.") .
         aboutMeParagraphAdd("As a developer, my passion is to work accurately and solve everyday problems by designing software architectures and writing clean, efficient as well as maintainable code while doing some project management.") .
         aboutMeParagraphAdd("When I’m not coding, you’ll probably find me playing the organ, the piano or visiting some city on a sunny afternoon.");
+
+    /*
+     ------------------
+     - Section Skills -
+     ------------------
+     */
+    $data->secSkills =
+        skillBegin("Language") .
+        skillAdd("Bash", "devicon/bash.svg", "My everyday language for build scripts, environment setup as well as server maintenance.", true) .
+        skillAdd("C", "devicon/c.svg", "In the world of microcontrollers, I had to work a lot with C code. Luckily, most of the time, part of the project’s codebase was written in C&NoBreak;+&NoBreak;+ and connected to C functionality.") .
+        skillAdd("C++", "devicon/cplusplus.svg", "Despite of its complexity and peculiarities, C&NoBreak;+&NoBreak;+ is my favorite language. I love C&NoBreak;+&NoBreak;+ because it is an established language known for its powerfulness, versatility, performance, and low-level access. Of course, with great power comes great responsibility (carefulness).") .
+        skillAdd("CSS", "devicon/css3.svg", "As a (former) backend web developer, I already got in touch with CSS and even learned a lot more when designing this homepage.") .
+        skillAdd("HTML", "devicon/html5.svg", "As a (former) backend web developer, I already got in touch with HTML and even learned a lot more when designing this homepage.") .
+        skillAdd("Java", "devicon/java.svg", "Java is the first programming language that I taught myself from a book during school. I created several private projects using Java. Having completed my Bachelor’s degree, I worked as a Java backend developer (up to Java 1.8). However, due to my interest in embedded programming, I rarely use Java these days.") .
+        skillAdd("JavaScript", "devicon/javascript.svg", "As a (former) backend web developer, I already got in touch with JavaScript and even learned a lot more when designing this homepage.") .
+        skillAdd("PHP", "devicon/php.svg", "As a (former) backend web developer, I sometimes got in touch with PHP, although mainly privately. However, I’ve learned a lot when designing this homepage.") .
+        skillAdd("Python", "devicon/python.svg", "My preferred language when I need to get small things done in no time; examples: data conversion or IoT device controlling (network stuff).") .
+        skillAdd("Rust", "devicon/rust.svg", 'I’m currently learning this cool language from Rust’s offical book "The Rust Programming Language" (which is a great book, by the way).', true) .
+        skillAdd("VHDL", "", "I’ve used VHDL to model FPGA designs, including the Out-of-Order CPU for my Master’s thesis.") .
+        skillEnd() .
+
+        skillBegin("Build") .
+        skillAdd("CMake", "devicon/cmake.svg", "To keep my C&NoBreak;+&NoBreak;+ projects manageable, I always use CMake – be it a small or large project.") .
+        skillAdd("Conan 2", "conan/conan.png", "Unlike many other languages, C&NoBreak;/&NoBreak;C&NoBreak;+&NoBreak;+ lacks a dependency manager. I use Conan professionally and privately to pull in external dependencies.") .
+        skillEnd() .
+
+        skillBegin("Framework") .
+        skillAdd("GoogleTest", "", "High-quality software requires good testing which starts at the unit test level. Therefore, writing C&NoBreak;+&NoBreak;+ unit tests using GoogleTest and GoogleMock is second nature to me.") .
+        skillAdd("Qt", "devicon/qt.svg", "Having developed HMIs, I got familiar with Qt (Qt Widgets, Qt Quick) on the PC but also on embedded devices that run Windows Embedded Compact or Raspberry Pi OS. Qt has become my preferred way of developing graphical interfaces using C&NoBreak;+&NoBreak;+.") .
+        skillEnd() .
+
+        skillBegin("Environment") .
+        skillAdd("Confluence", "devicon/confluence.svg", "I use Confluence wikis in several client projects.") .
+        skillAdd("Docker", "devicon/docker.svg", "Containerization is part of nearly every professional and private project I fiddle with because, on the one hand, I’d like to keep my host system’s environment as clean as possible. On the other hand, I use containers locally as well as in the CI (Continuous Integration) to have reproducible builds, no matter on which system they run.") .
+        skillAdd("Eclipse", "devicon/eclipse.svg", "I’ve been using the Eclipse IDE for many years in the Java world. Dealing with Eclipse CDT (C&NoBreak;/&NoBreak;C&NoBreak;+&NoBreak;+ Development Tooling) or some IDEs that are based on it (STM32CubeIDE) reminds me of the old Java times.") .
+        skillAdd("Gitlab", "devicon/gitlab.svg", "Nearly all of my client projects have a Gitlab instance running for centralized source control and CI (Continuous Integration). I’ve also set up and managed instances.") .
+        skillAdd("Jira", "devicon/jira.svg", "I use Jira in several client projects as a ticketing and time tracking system.") .
+        skillAdd("PlantUML", "plantuml/plantuml.svg", "When it comes to software architecture creation, putting down architectural decisions, or defining processes, PlantUML is my number one modeling tool for visualizing it all.") .
+        skillAdd("Visual Studio Code", "devicon/vscode.svg", "One of my favorite code editors for nearly every language since it includes support for various toolchains via its extension system.") .
+        skillAdd("Vim", "devicon/vim.svg", "Definitely my favorite text and code editor when dealing with a few files or simple projects.") .
+        skillAdd("Vivado", "", "Being familiar with AMD (formerly Xilinx) FPGAs, I used Vivado for designing and simulating designs as well as uploading them to the FPGA during my Master’s studies and my talks.") .
+        skillEnd() .
+
+        skillBegin("OS") .
+        skillAdd("Arch Linux", "devicon/archlinux.svg", "My favorite and main operating system in the private environment because it is super lightweight and can be customized very well.") .
+        skillAdd("Debian", "devicon/debian.svg", "I’ve used Debian privately before switching to Arch Linux.") .
+        skillAdd("FreeRTOS", "", "I’ve gotten in touch with FreeRTOS on an STM32 microcontroller during a client project.") .
+        skillAdd("Ubuntu", "devicon/ubuntu.svg", "I use Ubuntu for client projects.") .
+        skillAdd("Windows", "devicon/windows11.svg", "My main operating system in former days and currently at work, typically in combination with the WSL (Windows Subsystem for Linux).") .
+        skillAdd("Windows Embedded Compact 2013", "", "For a client project with real-time requirements, I’ve been optimizing applications for Windows Embedded Compact 2013, including rewriting kernel drivers and debugging kernel events.") .
+        skillEnd();
 ?>

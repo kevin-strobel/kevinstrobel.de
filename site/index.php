@@ -106,5 +106,15 @@
             echo $data->secAboutMe;
         ?>
     </section>
+
+    <section id="skills" class="flex justify-center flex-col text-white m-auto w-5/6 xl:w-2/3">
+        <h1 class="hidden">Skills</h1>
+
+        <div class="flex flex-col gap-26">
+            <?php
+                echo $data->secSkills;
+            ?>
+        </div>
+    </section>
 </body>
 </html>
