@@ -32,6 +32,14 @@
     <!-- Place CSS first, then JS to prevent Firefox FOUC quirks. -->
     <link rel="stylesheet" href="styles.css">
 
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "<?php echo $data->metaAuthor; ?>",
+            "url": "<?php echo $data->url; ?>"
+        }
+    </script>
     <script src="script.js"></script>
     <script src="sky.js"></script>
 </head>

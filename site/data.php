@@ -37,6 +37,7 @@
     $data->location = "Nuremberg, BY, Germany";
     // This is not the real address, see script.js:msg for more details
     $data->mail = "kevi0@kevinstrobel.me";
+    $data->url = "https://kevinstrobel.de";
 
     /*
      ********

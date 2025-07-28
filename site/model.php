@@ -19,6 +19,7 @@
         public string $degree;
         public string $location;
         public string $mail;
+        public string $url;
 
         public string $menu;
 
