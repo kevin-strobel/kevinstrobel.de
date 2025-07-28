@@ -157,7 +157,7 @@
         'l',
         'Friedrich-Alexander-Universität Erlangen-Nürnberg',
         '04/2018 - 03/2021',
-        'Computer science studies (Master of Science)',
+        'Computer Science Studies (Master of Science)',
         <<<EOL
         <li>Thesis about developing and benchmarking an Out-of-Order RISC&NoBreak;-&NoBreak;V CPU on an FPGA</li>
         <li>Original thesis title: "Evaluating a Custom-Made Out-of-Order RISC&NoBreak;-&NoBreak;V CPU In Regard to Application Specific Instruction Set Extensions"</li>
@@ -169,11 +169,13 @@
         'r',
         'Friedrich-Alexander-Universität Erlangen-Nürnberg',
         '03/2019 - 09/2019',
-        'Research assistant at the chair of Computer Architecture',
+        'Research Assistant at the Chair of Computer Architecture',
         <<<EOL
         <li>Simulate C programs on Verilog-based RISC&NoBreak;-&NoBreak;V processor models using Verilator and VCS</li>
         <li>Create a script environment to automate extensive tests</li>
         <li>Determine the run time (number of processor clock cycles) and power consumption for each program under test</li>
+        <br/>
+        <li>Motivation: This data will then be used to train AI models predicting runtime and power consumption for arbitrary programs, eliminating the need to execute them on actual hardware</li>
         EOL
         ) .
         careerEnd() .
@@ -199,7 +201,7 @@
         'l',
         'Duale Hochschule Baden-Württemberg Ravensburg',
         '10/2011 - 09/2014',
-        'Business informatics studies (Bachelor of Science, "Duales Studium")',
+        'Business Informatics Studies (Bachelor of Science, "Duales Studium")',
         <<<EOL
         <li>Thesis about managing mutual dependencies between departments in a Scrum-driven project; to visualize those dependencies, I created a web-based tool</li>
         <li>Original thesis title: "Management von wechselseitigen Abhängigkeiten zwischen Scrum-getriebenen Abteilungen in der Bundesagentur für Arbeit und Entwicklung eines Tools zur Visualisierung dieser Interdependenzen"</li>
@@ -211,10 +213,10 @@
         'r',
         'Accenture Technology Solutions GmbH',
         '10/2011 - 09/2014',
-        'Practical part of the studies ("Duales Studium")',
+        'Practical Part of the Studies ("Duales Studium")',
         <<<EOL
         <li>Test a large JavaEE-based web application</li>
-        <li>Write unit-tests</li>
+        <li>Write unit tests</li>
         <li>Support the project management office</li>
         EOL
         ) .
